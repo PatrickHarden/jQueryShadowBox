@@ -1,0 +1,31 @@
+
+img {max-width: 100%;}
+.shadow { float:left; clear:both;  }
+.shadow img { max-width:100%;  }
+
+.shadowActive { background-size:auto 85%; opacity:0; position:fixed; color:white; font-size:32px; top:0; right:0; left:0; bottom:0; background-color:rgba(0,0,0,0.9); text-align: center; z-index:4; background-repeat: no-repeat; background-position:center center; transition:.3s ease all;}
+.shadowActive img { width:auto; position:relative; top:50%; transform:translateY(-50%); max-height: 100vh; max-width: 100vw;}
+.shadowButton { color:white; display:none; position:fixed; bottom:0; z-index: 10; font-size:30px; font-family:'Myriad Pro';  }
+.shadowActive p {display:none;}
+
+.leftArrow, .rightArrow {  background-image: url('../Images/left.svg'); z-index: 5; height: 50px; width: 50px; top: 50%; background-repeat: no-repeat; position: fixed; filter: invert(100%); transform: translateY(-50%); left: 1%; }
+
+.rightArrow { background-image: url('../Images/right.svg'); left: initial; right: 1%; left: auto; }
+.shadowDiv { transition: .3s ease all;  }
+.shadowDiv > div { transition:.3s ease all; }
+.close { background-image: url('close.svg'); position:fixed; top:1%; right:1%;}
+
+.touchmove, .stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width:480px){
+    .shadowButton {font-size:22px;}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+    .leftArrow { background-image: url('../Images/left_new.png'); }
+    .rightArrow { background-image: url('../Images/right_new.png'); }
+}
